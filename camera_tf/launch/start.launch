@@ -1,0 +1,7 @@
+<launch>
+<include file="$(find jaka_driver)/launch/robot_start_launch.launch" />
+<node pkg="camera_tf" name="camera_to_world_br" type="tf_broadcaster.py"></node>
+<node pkg="camera_tf" name="camera_tf" type="camera_tf.py"></node>
+<node pkg="cv_process" name="cv_process" type="cv_process.py"></node>
+
+</launch>
